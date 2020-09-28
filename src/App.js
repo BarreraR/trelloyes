@@ -1,13 +1,12 @@
 import React from 'react';
 import List from './List';
-import Card from './Card';
 
 function myArray(arr, obj){
   let cards = [];
   for(let i=0; i<arr.length; i++ ){
-    for(let [key, value] in Object.entries(obj)){
+    for(let key in obj){
       if(arr[i] === key){
-        cards.push(value);
+        cards.push(obj[arr[i]]);
       }
     }
   }
@@ -24,7 +23,7 @@ function App(props) {
         <h1>Trelloyes!</h1>
       </header>
       <div className="App-list">
-        {arr.join("")}
+        {arr}
       </div>
     </main>
   );

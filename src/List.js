@@ -9,7 +9,7 @@ function List(props) {
             <h2>{props.header}</h2>
           </header>
           <div className="List-cards">
-            {cards.join("")}
+            {cards}
           </div>
         </section>
     );
