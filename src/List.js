@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card.js';
 
 function List(props) {
-    const cards = props.cards.map(card => <Card title={card.title} content={card.content}/> );
+    const cards = props.cards.map(card => <Card key={card.id} title={card.title} content={card.content}/> );
     return (
         <section className="List">
           <header className="List-header">
